@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      <link href="styles.css" rel="stylesheet" type="text/css" />
+    <h:head>
+   <title>User Profile</title>
+   <style>
+ .user-profile {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+  }
+.profile-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.profile-info {
+    font-size: 16px;
+    margin-bottom: 10px;
+ }
+.edit-link {
+    text-decoration: underline;
+    color: #0073e6;
+    cursor: pointer;
+    }
+   </style>
+    
+</h:head>
+    
+    <div class="header">
+        <h:outputLink value="home.xhtml">Smart Laundry</h:outputLink>
+        <div>
+            <h:outputLink style="margin-right: 20px" value="basketRegistration.xhtml">Basket Registration</h:outputLink>
+            <h:outputLink style="margin-right: 20px" value="collections.xhtml">Collections</h:outputLink>
+            <h:outputLink style="margin-right: 20px" value="reports.xhtml">Reports</h:outputLink>
+            <h:outputLink value="profile.xhtml" >User profile</h:outputLink>
+        </div>
+    </div>
+    
+    <div class="user-profile">
+        <div style="font-weight: bold"  class="profile-heading">User Profile</div>
+        <div class="profile-info">
+            <p><strong>Name:</strong> #{sessionScope['loggedInUser']}</p>
+            <p><strong>Email:</strong> #{sessionScope['loggedInEmail']}</p>
+        </div>
+    </div>
+
+
+</html>
+

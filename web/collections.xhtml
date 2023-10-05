@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <h:head>
+        <title>Collections</title>
+    </h:head>
+    
+    <div class="header">
+        <h:outputLink value="home.xhtml">Smart Laundry</h:outputLink>
+        <div>
+            <h:outputLink style="margin-right: 20px" value="basketRegistration.xhtml">Basket Registration</h:outputLink>
+            <h:outputLink style="margin-right: 20px" value="collections.xhtml">Collections</h:outputLink>
+            <h:outputLink style="margin-right: 20px" value="reports.xhtml">Reports</h:outputLink>
+           <h:outputLink value="profile.xhtml" >User profile</h:outputLink>
+        </div>
+    </div>
+    
+    
+    <h:form>
+    <div class="main-body">
+        <ui:repeat value="#{basketRegistrationBean.baskets}" var="basket">
+            <div class="card">
+                <h2 class="card-title">#{basket.b_name}</h2>
+                <p>Capacity: #{basket.b_capacity} KG</p>
+                <p class="card-description">Status: Active✅</p>
+                <h:commandButton class="r-button" value="Delete" action="#{basket.deleteBasket(basket.b_name, basket.b_capacity)}" />
+            </div>
+        </ui:repeat>
+    </div>
+    </h:form>
+   
+</html>
+

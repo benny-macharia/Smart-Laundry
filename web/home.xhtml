@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <h:head>
+    <title>Smart Laundry</title>
+    <style>
+        /* CSS styles for header */
+        
+
+        /* CSS styles for main body */
+        .main-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            width: 300px;
+        }
+
+        /* CSS styles for card title */
+        .card-title {
+            font-weight: bold;
+        }
+
+        /* CSS styles for card description */
+        .card-description {
+            color: #555;
+        }
+        
+
+        /* CSS styles for laundry boxes */
+        .laundry-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .home-title{
+            display: flex;
+            align-items: end; 
+            margin-top: 30px; 
+            margin-left: 20px;
+            font-weight: bold; 
+            font-size: 30px; 
+        }
+        
+    </style>
+</h:head>
+<h:body>
+    <!-- Header -->
+    <div class="header">
+        <h:outputLink value="home.xhtml">Smart Laundry</h:outputLink>
+        <div>
+            <h:outputLink style="margin-right: 20px" value="basketRegistration.xhtml">Basket Registration</h:outputLink>
+            <h:outputLink style="margin-right: 20px" value="collections.xhtml">Collections</h:outputLink>
+            <h:outputLink style="margin-right: 20px" value="reports.xhtml">Reports</h:outputLink>
+            <h:outputLink value="profile.xhtml" >User profile</h:outputLink>
+        </div>
+    </div>
+    
+    <div class="home-title">
+        <h:outputText value="Welcome #{sessionScope['loggedInUser']}" />
+    </div>
+    <!-- Main Body -->
+    <div class="main-body">
+        
+    <ui:repeat value="#{basketRegistrationBean.baskets}" var="basket">
+            <div class="card">
+                <h2 class="card-title">#{basket.b_name}</h2>
+                <p>Capacity: #{basket.b_capacity} KG</p>
+                <p class="card-description">Status: Active✅</p>
+            </div>
+        </ui:repeat>
+    </div>
+</h:body>
+</html>
+

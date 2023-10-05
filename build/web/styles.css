@@ -1,0 +1,154 @@
+
+.text-links{
+    text-decoration: none;
+    color: black;
+}
+.text-links-basket{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.form{
+    box-sizing: border-box;
+    width: 300px;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    height: 500px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 50px;
+}
+.input{
+    margin-bottom:20px ;
+    height: 20px;
+
+}
+
+
+
+.button{
+    border-radius: 150px;
+    border-color: black;
+    margin-top: 10px;
+    padding:5px;
+}
+
+
+
+ .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 50px;
+     background-color: black;
+     color: white;
+     margin: 0;
+}
+
+.header a{
+    text-decoration: none; 
+    color: white;
+}
+.card {
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+   width: 300px;
+}
+
+        
+  .card-title {
+    font-weight: bold;
+   }
+
+        
+   .card-description {
+     color: #555;
+   }
+   .r-form{
+     display: flex;
+     align-content: center; 
+     justify-content: center; 
+    }
+.registration-form {
+    margin-top: 40px; 
+    text-align: center;
+    width: 300px; 
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.r-input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.r-button {
+    background-color: black;
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.table-spacing tr {
+    margin-bottom: 10px;
+}
+
+
+
+.user-profile {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+  }
+.profile-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.profile-info {
+    font-size: 16px;
+    margin-bottom: 10px;
+ }
+.edit-link {
+    text-decoration: underline;
+    color: #0073e6;
+    cursor: pointer;
+    }
+    
